@@ -8,7 +8,7 @@ select.addEventListener('change', () => {
         .then((res) => {
             selectedCar.forEach((car) => {
                 if (car.selected) {
-                    const {brand, model, price} = res.cars[car.index + 1] 
+                    const {brand, model, price} = res.cars[car.index - 1] 
                     console.log(brand)
                     output.innerHTML = (`Тачка ${brand} ${model} <br> Цена: ${price}$`)
                 }
